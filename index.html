@@ -6,6 +6,15 @@
 <title>Village of Roy, New Mexico</title>
 
 <style>
+
+:root{
+    --primary:#6b4f2a;
+    --secondary:#d8c3a5;
+    --light:#f7f3ec;
+    --dark:#2c2c2c;
+    --accent:#8b5e34;
+}
+
 *{
     margin:0;
     padding:0;
@@ -13,45 +22,85 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height:1.6;
-    color:#333;
-    background:#f5f7fa;
+    font-family: Georgia, serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.7;
 }
 
-header{
-    background:#1f4e79;
-    color:white;
+a{
+    text-decoration:none;
+}
+
+.hero{
+    height:70vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url('hero.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:80px 20px;
+    color:white;
 }
 
-header h1{
-    font-size:3rem;
+.hero-content{
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
     margin-bottom:10px;
 }
 
-header p{
-    font-size:1.2rem;
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:var(--primary);
+    padding:12px 22px;
+    border-radius:5px;
+    margin:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#eee;
+}
+
+.notice-bar{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:12px;
 }
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:20px;
+    padding:50px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:30px;
+    font-size:2rem;
 }
 
 .card{
     background:white;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    margin-bottom:25px;
-}
-
-h2{
-    color:#1f4e79;
-    margin-bottom:15px;
+    border-radius:8px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    margin-bottom:30px;
 }
 
 .grid{
@@ -61,206 +110,290 @@ h2{
 }
 
 .info-box{
-    background:#eef4f8;
+    background:#faf8f4;
+    border-left:5px solid var(--accent);
     padding:20px;
+}
+
+.info-box h3{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
     border-radius:8px;
-}
-
-.btn{
-    display:inline-block;
-    background:#1f4e79;
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:5px;
-    margin-top:15px;
-}
-
-.btn:hover{
-    background:#163854;
 }
 
 ul{
     padding-left:20px;
 }
 
+.community{
+    background:white;
+    text-align:center;
+    padding:40px;
+    border-radius:8px;
+}
+
+.community a{
+    display:inline-block;
+    margin-top:15px;
+    background:#1877f2;
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+}
+
 footer{
-    background:#1f4e79;
+    background:var(--primary);
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:40px;
+    padding:40px 20px;
 }
 
 footer a{
-    color:white;
-}
-
-.notice{
-    background:#fff8e6;
-    border-left:5px solid #d4a017;
-    padding:15px;
-    margin-top:15px;
+    color:#fff;
+    text-decoration:underline;
 }
 
 @media(max-width:768px){
-    header h1{
-        font-size:2rem;
-    }
+
+.hero{
+    height:auto;
+    padding:80px 20px;
 }
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Village of Roy</h1>
-    <p>Serving Our Community With Pride Since 1901</p>
-</header>
+<div class="hero">
+
+    <div class="hero-content">
+
+        <h1>Village of Roy</h1>
+
+        <p>
+            A Historic Community in the Heart of Northeastern New Mexico
+        </p>
+
+        <a href="#contact" class="btn">Contact Village Hall</a>
+
+        <a href="https://facebook.com" class="btn">
+            Community Facebook
+        </a>
+
+    </div>
+
+</div>
+
+<div class="notice-bar">
+    This website is currently being updated to better serve residents and visitors.
+</div>
 
 <div class="container">
 
-    <section class="card">
-        <h2>Welcome to Roy, New Mexico</h2>
+    <h2 class="section-title">Welcome to Roy</h2>
+
+    <div class="card">
 
         <p>
-            Located in the beautiful high plains of northeastern New Mexico,
-            Roy is a historic ranching community known for its strong values,
-            western heritage, and close-knit residents.
+            Nestled in the high plains of Harding County, Roy is a close-knit
+            rural community with a proud ranching heritage, strong family values,
+            and a commitment to preserving the traditions that make small-town
+            New Mexico special.
         </p>
 
-        <p style="margin-top:15px;">
-            Whether you are a resident, visitor, or prospective business owner,
-            we welcome you to learn more about our village and community.
-        </p>
-    </section>
+    </div>
 
-    <section class="card">
-        <h2>Village Information</h2>
+    <h2 class="section-title">Village Hall</h2>
 
-        <div class="grid">
+    <div class="grid">
 
-            <div class="info-box">
-                <h3>Mayor</h3>
-                <p>Edward DeHerrera</p>
-            </div>
-
-            <div class="info-box">
-                <h3>Village Clerk</h3>
-                <p>Dany Laumbauch</p>
-            </div>
-
-            <div class="info-box">
-                <h3>Deputy Clerk</h3>
-                <p>Ruth</p>
-            </div>
-
+        <div class="info-box">
+            <h3>Mayor</h3>
+            Edward DeHerrera
         </div>
-    </section>
 
-    <section class="card">
-        <h2>Contact Village Hall</h2>
+        <div class="info-box">
+            <h3>Village Clerk</h3>
+            Dany Laumbauch
+        </div>
 
-        <p><strong>Address:</strong><br>
-        381 Fair Street<br>
-        P.O. Box 8<br>
-        Roy, NM 87743</p>
+        <div class="info-box">
+            <h3>Deputy Clerk</h3>
+            Ruth
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="card">
+
+        <h3>Village Contact Information</h3>
 
         <br>
 
-        <p><strong>Phone:</strong> (575) 485-2541</p>
-        <p><strong>Fax:</strong> (575) 485-2673</p>
-        <p><strong>Email:</strong> villageofroy@plateautel.net</p>
+        <p>
+            <strong>Address:</strong><br>
+            381 Fair Street<br>
+            P.O. Box 8<br>
+            Roy, NM 87743
+        </p>
 
-        <a href="mailto:villageofroy@plateautel.net" class="btn">
-            Email Village Hall
+        <br>
+
+        <p>
+            <strong>Phone:</strong> (575) 485-2541
+        </p>
+
+        <p>
+            <strong>Fax:</strong> (575) 485-2673
+        </p>
+
+        <p>
+            <strong>Email:</strong> villageofroy@plateautel.net
+        </p>
+
+    </div>
+
+    <h2 class="section-title">About Roy</h2>
+
+    <div class="card about">
+
+        <div>
+
+            <p>
+                Founded in 1901 and named after Frank Roy, the community's first
+                postmaster, Roy grew with the arrival of the Dawson Railway and
+                became an important center for ranching and commerce.
+            </p>
+
+            <br>
+
+            <p>
+                Today, Roy remains proud of its western heritage and continues
+                to serve residents throughout Harding County.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>Population: 193</li>
+                <li>County: Harding County</li>
+                <li>Elevation: 5,896 ft</li>
+                <li>ZIP Code: 87743</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <img src="roy-mainstreet.jpg" alt="Roy Main Street">
+
+        </div>
+
+    </div>
+
+    <h2 class="section-title">News & Notices</h2>
+
+    <div class="grid">
+
+        <div class="info-box">
+            <h3>Community Announcements</h3>
+            Future announcements and updates will be posted here.
+        </div>
+
+        <div class="info-box">
+            <h3>Meeting Information</h3>
+            Agendas and minutes will be available here.
+        </div>
+
+        <div class="info-box">
+            <h3>Public Notices</h3>
+            Important notices and updates for residents.
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="community">
+
+        <h2>Community Connections</h2>
+
+        <p>
+            Stay connected with local events, elections,
+            community activities, and announcements through
+            the Roy New Mexico community Facebook page.
+        </p>
+
+        <a href="https://facebook.com">
+            Visit Community Facebook Page
         </a>
-    </section>
 
-    <section class="card">
-        <h2>About Roy</h2>
+    </div>
 
-        <p>
-            Roy was founded in 1901 and named after Frank Roy,
-            the community's first postmaster. The village grew
-            following the arrival of the Dawson Railway and became
-            an important center for ranching and commerce in
-            northeastern New Mexico.
-        </p>
+    <br>
 
-        <br>
+    <div class="card">
 
-        <p>
-            Today Roy remains proud of its heritage while serving
-            residents across Harding County.
-        </p>
-
-        <br>
-
-        <ul>
-            <li>Population: Approximately 193</li>
-            <li>County: Harding County</li>
-            <li>Elevation: 5,896 ft</li>
-            <li>ZIP Code: 87743</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>Community Announcements</h2>
-
-        <div class="notice">
-            Future announcements, public notices, meeting information,
-            and community updates will be posted here.
-        </div>
-    </section>
-
-    <section class="card">
-        <h2>Website Improvements Underway</h2>
-
-        <p>
-            The Village of Roy is exploring additional online services
-            and resources to better serve residents.
-        </p>
+        <h2>Future Online Services</h2>
 
         <br>
 
         <ul>
             <li>Meeting Agendas & Minutes</li>
-            <li>Community Announcements</li>
             <li>Forms & Documents</li>
             <li>Resident Service Requests</li>
+            <li>Community Announcements</li>
             <li>Online Utility Services</li>
         </ul>
-    </section>
 
-    <section class="card">
-        <h2>Community Connections</h2>
-
-        <p>
-            Stay connected with local events, community news,
-            elections, and announcements through the Roy New Mexico
-            Facebook community page.
-        </p>
-
-        <br>
-
-        <a href="#" class="btn">
-            Community Facebook Page
-        </a>
-    </section>
+    </div>
 
 </div>
 
-<footer>
-    <p>Village of Roy, New Mexico</p>
-    <p>Serving Our Community With Pride Since 1901</p>
+<footer id="contact">
+
+    <h3>Village of Roy, New Mexico</h3>
+
+    <p>
+        381 Fair Street • Roy, NM 87743
+    </p>
+
+    <p>
+        (575) 485-2541
+    </p>
+
     <br>
+
     <small>
-        Website support provided by
-        <a href="https://seamlessoutbound.com" target="_blank">
+        Website Support Provided By
+        <a href="https://seamlessoutbound.com">
             Seamless Outbound
         </a>
     </small>
+
 </footer>
 
 </body>
