@@ -13,7 +13,7 @@ a{    text-decoration:none;}
 .hero-content{    max-width:900px;    padding:20px;}
 .hero h1{    font-size:4rem;    margin-bottom:10px;}
 .hero p{    font-size:1.3rem;    margin-bottom:25px;}
-.btn{    display:inline-block;    background:white;    color:var(--primary);    padding:12px 22px;    border-radius:5px;    margin:5px;    font-weight:bold;    border:none;}
+.btn{    display:inline-block;    background:white;    color:var(--primary);    padding:12px 22px;    border-radius:5px;    margin:5px;    font-weight:bold;    border:none;    cursor:pointer;}
 .btn:hover{    background:#eee;}
 .notice-bar{    background:var(--primary);    color:white;    text-align:center;    padding:12px;}
 .container{    max-width:1100px;    margin:auto;    padding:50px 20px;}
@@ -29,10 +29,40 @@ ul{    padding-left:20px;}
 .community a{    display:inline-block;    margin-top:15px;    background:#1877f2;    color:white;    padding:12px 20px;    border-radius:5px;}
 footer{    background:var(--primary);    color:white;    text-align:center;    padding:40px 20px;}
 footer a{    color:#fff;    text-decoration:underline;}
+
+/* Newsletter Styling */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.newsletter-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    font-family: inherit;
+}
+.newsletter-btn {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.newsletter-btn:hover {
+    background: var(--accent);
+}
+
 @media(max-width:768px){
 .hero{    height:auto;    padding:80px 20px;}
 .hero h1{    font-size:2.4rem;}
 .about{    grid-template-columns:1fr;}
+.newsletter-form { flex-direction: column; }
 }
 </style></head><body>
 <div class="hero">
@@ -116,6 +146,18 @@ footer a{    color:#fff;    text-decoration:underline;}
         </div>
     </div>
     <br>
+
+    <div class="card">
+        <h3>📩 Join the Village Community Newsletter</h3>
+        <p style="font-size: 0.95rem; margin-top: 5px; color: var(--dark);">
+            Sign up to receive official community alerts, town meeting updates, and local municipal announcements directly to your email inbox.
+        </p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Newsletter engine integration blueprint pending Phase 2 activation.');">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-btn">Subscribe to Updates</button>
+        </form>
+    </div>
+
     <div class="community">
         <h2>Community Connections</h2>
         <p>
@@ -139,11 +181,11 @@ footer a{    color:#fff;    text-decoration:underline;}
 
         <div class="info-box" style="background: white; border-top: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-                <h3 style="margin-bottom: 10px;">🚜 Digital Asset Bookings</h3>
-                <p style="font-size: 0.95rem; margin-bottom: 15px;">Automated online scheduling processing for local commercial water truck fill stands, facility equipment, and public park area bookings.</p>
-                <p style="font-size: 0.85rem; font-style: italic; color: #666; margin-bottom: 15px;">Integrated digital liability waivers and availability checkers are being configured to minimize manual clerk tracking logs.</p>
+                <h3 style="margin-bottom: 10px;">👕 Official Village Gift Shop</h3>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">A localized print-on-demand community storefront featuring historic town apparel, custom high school sports items, and regional legacy memorabilia.</p>
+                <p style="font-size: 0.85rem; font-style: italic; color: #666; margin-bottom: 15px;">This system passes 100% of profit margins back into the official town treasury routing layout without requiring inventory space.</p>
             </div>
-            <button class="btn" style="background: #e5e7eb; color: #9ca3af; cursor: not-allowed; width: 100%; margin: 0;" disabled>System Blueprint Pending</button>
+            <button class="btn" style="background: #e5e7eb; color: #9ca3af; cursor: not-allowed; width: 100%; margin: 0;" disabled>Store Layout Pending</button>
         </div>
 
         <div class="info-box" style="background: #faf8f4; border-top: 4px solid var(--dark); display: flex; flex-direction: column; justify-content: space-between;">
@@ -161,9 +203,9 @@ footer a{    color:#fff;    text-decoration:underline;}
         <br>
         <ul>
             <li>Meeting Agendas & Minutes (Clerk Dashboard)</li>
+            <li>Digital Village Gift Shop & Custom Apparel Store</li>
             <li>Forms & Downloadable Documents</li>
-            <li>Resident Service Requests</li>
-            <li>Community Announcements & Bulletins</li>
+            <li>Automated Newsletter & Alert Subscriptions</li>
             <li>Online Utility Card Remittance Portals</li>
         </ul>
     </div>
